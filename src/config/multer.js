@@ -2,27 +2,23 @@ const multer = require("multer");
 const path = require("path");
 const fs = require("fs");
 
-// Path to the uploads directory inside src
 const uploadDir = path.join(__dirname, "../uploads");
 
-// Ensure the uploads directory exists
 if (!fs.existsSync(uploadDir)) {
-  fs.mkdirSync(uploadDir, { recursive: true }); // Create the directory if it doesn't exist
+  fs.mkdirSync(uploadDir, { recursive: true });
   console.log(`Uploads directory created at: ${uploadDir}`);
 }
 
-// Multer storage configuration
 const storage = multer.diskStorage({
   destination: (req, file, cb) => {
-    cb(null, uploadDir); // Save files to the uploads directory
+    cb(null, uploadDir);
   },
   filename: (req, file, cb) => {
     const uniqueSuffix = Date.now() + "-" + Math.round(Math.random() * 1e9);
-    cb(null, uniqueSuffix + path.extname(file.originalname)); // Generate unique filename
+    cb(null, uniqueSuffix + path.extname(file.originalname));
   },
 });
 
-// File filter for images only
 const fileFilter = (req, file, cb) => {
   const allowedMimeTypes = ["image/jpeg", "image/png", "image/jpg"];
   if (allowedMimeTypes.includes(file.mimetype)) {
@@ -32,7 +28,6 @@ const fileFilter = (req, file, cb) => {
   }
 };
 
-// Multer instance
 const upload = multer({
   storage,
   fileFilter,

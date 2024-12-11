@@ -4,10 +4,10 @@ const { Schema } = mongoose;
 const memberSchema = new Schema(
   {
     name: { type: String, required: true },
-    username: { type: String, unique: true, required: true }, // Unique username
-    email: { type: String, unique: true, required: true }, // Unique email
+    username: { type: String, unique: true, required: true },
+    email: { type: String, unique: true, required: true },
     birthDate: { type: Date, required: true },
-    subscribedBooks: [{ type: Schema.Types.ObjectId, ref: "Book" }], // Array of subscribed book IDs
+    subscribedBooks: [{ type: Schema.Types.ObjectId, ref: "Book" }],
     borrowedBooks: [
       {
         borrowedBookId: {
@@ -19,9 +19,9 @@ const memberSchema = new Schema(
         returnDate: { type: Date, required: true },
       },
     ],
-    returnRate: { type: Number, default: 0 }, // Default return rate
+    returnRate: { type: Number, default: 0 },
   },
-  { timestamps: true } // Automatically adds createdAt and updatedAt
+  { timestamps: true }
 );
 
 module.exports = mongoose.model("Member", memberSchema);

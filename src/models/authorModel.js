@@ -15,7 +15,7 @@ const authorSchema = new Schema(
     profileImageUrl: { type: String, required: true },
     birthDate: { type: Date, required: true },
   },
-  { timestamps: true } // Automatically add createdAt and updatedAt fields
+  { timestamps: true }
 );
 
 module.exports = mongoose.model("Author", authorSchema);

@@ -125,46 +125,37 @@ class bookController {
 
   async publishBook(req, res) {
     try {
-      const { id } = req.params; // Extract book ID from parameters
-      const { isPublished } = req.body; // Extract `isPublished` status from request body
+      const { id } = req.params;
+      const { isPublished } = req.body;
 
-      // Validate `isPublished` field
       if (typeof isPublished !== "boolean") {
         return res.status(400).json({ error: "isPublished must be a boolean" });
       }
 
-      // Find the book and update its published status
       const updatedBook = await Book.findByIdAndUpdate(
         id,
         { isPublished },
-        { new: true } // Return the updated document
+        { new: true }
       );
 
-      // If the book doesn't exist, return a 404 error
       if (!updatedBook) {
         return res.status(404).json({ error: "Book not found" });
       }
 
-      // If the book is published, notify all subscribed members via email
       if (isPublished) {
-        // Find members subscribed to this book
         const subscribedMembers = await Member.find({ subscribedBooks: id });
 
-        // Check if there are any subscribed members
         if (subscribedMembers.length > 0) {
-          // Prepare email promises for concurrent sending
           const emailPromises = subscribedMembers.map((member) => {
             const subject = `The book "${updatedBook.title.en}" has been published!`;
             const text = `Dear ${member.name},\n\nWe are excited to inform you that the book "${updatedBook.title.en}" has been published and is now available in our library.\n\nThank you for being part of our community!\n\nBest regards,\nLibrary Team`;
             return sendEmail(member.email, subject, text);
           });
 
-          // Send all emails concurrently
           await Promise.all(emailPromises);
         }
       }
 
-      // Respond with the updated book details
       res.status(200).json({
         message: `Book has been ${isPublished ? "published" : "unpublished"}.`,
         updatedBook,

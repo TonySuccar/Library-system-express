@@ -7,7 +7,6 @@ class AuthorController {
     try {
       const authorData = req.body;
 
-      // Save the uploaded file's path to `profileImageUrl`
       if (req.file) {
         authorData.profileImageUrl = `/uploads/${req.file.filename}`;
       }

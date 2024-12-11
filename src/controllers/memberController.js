@@ -270,7 +270,6 @@ class MemberController {
       }
 
       if (action === "subscribe") {
-        // Subscribe: Add the book ID to the subscribedBooks array if it's not already present
         if (!member.subscribedBooks.includes(bookId)) {
           member.subscribedBooks.push(bookId);
         } else {
@@ -279,7 +278,6 @@ class MemberController {
             .json({ error: "Already subscribed to this book." });
         }
       } else if (action === "unsubscribe") {
-        // Unsubscribe: Remove the book ID from the subscribedBooks array
         const index = member.subscribedBooks.indexOf(bookId);
         if (index > -1) {
           member.subscribedBooks.splice(index, 1);
@@ -290,10 +288,8 @@ class MemberController {
         }
       }
 
-      // Save the member
       await member.save();
 
-      // Respond with the updated subscribedBooks array
       res.status(200).json({
         message: `Successfully ${
           action === "subscribe" ? "subscribed to" : "unsubscribed from"
@@ -309,13 +305,11 @@ class MemberController {
     try {
       const { memberId, bookId } = req.params;
 
-      // Find the member
       const member = await Member.findById(memberId);
       if (!member) {
         return res.status(404).json({ error: "Member not found" });
       }
 
-      // Find the borrowed book entry
       const borrowedBook = member.borrowedBooks.find(
         (b) => b.borrowedBookId.toString() === bookId
       );
@@ -327,25 +321,20 @@ class MemberController {
 
       const currentDate = new Date();
 
-      // Check if the book is returned on time
       const isReturnedOnTime = currentDate <= new Date(borrowedBook.returnDate);
 
-      // Update the return rate
       if (isReturnedOnTime) {
-        member.returnRate = Math.min(member.returnRate + 0.1, 1); // Increment return rate by 10% (max 100%)
+        member.returnRate = Math.min(member.returnRate + 0.1, 1);
       } else {
-        member.returnRate = Math.max(member.returnRate - 0.1, 0); // Decrement return rate by 10% (min 0%)
+        member.returnRate = Math.max(member.returnRate - 0.1, 0);
       }
 
-      // Remove the book from the member's borrowedBooks list
       member.borrowedBooks = member.borrowedBooks.filter(
         (b) => b.borrowedBookId.toString() !== bookId
       );
 
-      // Save the updated member
       await member.save();
 
-      // Find the book and increase its available copies
       const book = await Book.findById(bookId);
       if (!book) {
         return res.status(404).json({ error: "Book not found" });
@@ -354,7 +343,6 @@ class MemberController {
 
       await book.save();
 
-      // Respond with success
       res.status(200).json({
         message: `Book returned successfully. ${
           isReturnedOnTime ? "Returned on time!" : "Returned late!"
