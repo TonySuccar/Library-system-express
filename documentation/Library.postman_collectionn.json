@@ -1,0 +1,856 @@
+{
+	"info": {
+		"_postman_id": "b8f8551d-f232-4abd-ad63-0111d0a9fddf",
+		"name": "Library",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "40260727"
+	},
+	"item": [
+		{
+			"name": "Book",
+			"item": [
+				{
+					"name": "CMS",
+					"item": [
+						{
+							"name": "add a book",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "title[en]",
+											"value": "new book",
+											"type": "text"
+										},
+										{
+											"key": "title[ar]",
+											"value": "new book",
+											"type": "text"
+										},
+										{
+											"key": "isbn",
+											"value": "978-1503280741",
+											"type": "text"
+										},
+										{
+											"key": "genre",
+											"value": "Adventure",
+											"type": "text"
+										},
+										{
+											"key": "description[en]",
+											"value": "A tale of a sea captain's obsession with a white whale.",
+											"type": "text"
+										},
+										{
+											"key": "description[ar]",
+											"value": "قصة هوس القبطان بحوت أبيض.",
+											"type": "text"
+										},
+										{
+											"key": "numberOfAvailableCopies",
+											"value": "4",
+											"type": "text"
+										},
+										{
+											"key": "isBorrowable",
+											"value": "true",
+											"type": "text"
+										},
+										{
+											"key": "numberOfBorrowableDays",
+											"value": "21",
+											"type": "text"
+										},
+										{
+											"key": "isOpenToReviews",
+											"value": "false",
+											"type": "text"
+										},
+										{
+											"key": "minAge",
+											"value": "14",
+											"type": "text"
+										},
+										{
+											"key": "authorId",
+											"value": "64b637f1a3e7a68b9c9d8b16",
+											"type": "text"
+										},
+										{
+											"key": "publishedDate",
+											"value": "2024-05-01",
+											"type": "text"
+										},
+										{
+											"key": "isPublished",
+											"value": "true",
+											"type": "text"
+										},
+										{
+											"key": "coverImageUrl",
+											"type": "file",
+											"src": "/Users/succar/Desktop/1984.JPEG"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:3000/books",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"books"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "fetch all books",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/books?page=1&limit=5&genre=Classic&search=",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"books"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "1"
+										},
+										{
+											"key": "limit",
+											"value": "5"
+										},
+										{
+											"key": "genre",
+											"value": "Classic"
+										},
+										{
+											"key": "search",
+											"value": ""
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "fetch book by id",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/books/67586342d0e1381779608b11",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"books",
+										"67586342d0e1381779608b11"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update book",
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "title[en]",
+											"value": "new Book",
+											"type": "text"
+										},
+										{
+											"key": "title[ar]",
+											"value": "newBook",
+											"type": "text"
+										},
+										{
+											"key": "isbn",
+											"value": "245-2345524342",
+											"type": "text"
+										},
+										{
+											"key": "genre",
+											"value": "fiction",
+											"type": "text"
+										},
+										{
+											"key": "description[en]",
+											"value": "new desc",
+											"type": "text"
+										},
+										{
+											"key": "description[ar]",
+											"value": "new desc",
+											"type": "text"
+										},
+										{
+											"key": "numberOfAvailableCopies",
+											"value": "23",
+											"type": "text"
+										},
+										{
+											"key": "isBorrowable",
+											"value": "true",
+											"type": "text"
+										},
+										{
+											"key": "numberOfBorrowableDays",
+											"value": "23",
+											"type": "text"
+										},
+										{
+											"key": "isOpenToReviews",
+											"value": "true",
+											"type": "text"
+										},
+										{
+											"key": "minAge",
+											"value": "2",
+											"type": "text"
+										},
+										{
+											"key": "authorId",
+											"value": "675874acde3096997ae74f57",
+											"type": "text"
+										},
+										{
+											"key": "publishedDate",
+											"value": "2024-02-02",
+											"type": "text"
+										},
+										{
+											"key": "isPublished",
+											"value": "true",
+											"type": "text"
+										},
+										{
+											"key": "coverImageUrl",
+											"type": "file",
+											"src": "/Users/succar/Desktop/H.melville.jpeg"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:3000/books/675864f0d0e1381779608b15",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"books",
+										"675864f0d0e1381779608b15"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "delete book by id",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/books/675864f0d0e1381779608b15",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"books",
+										"675864f0d0e1381779608b15"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "publish a book send mail",
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"isPublished\": true\n}\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/books/675860add0e1381779608b0d/publish",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"books",
+										"675860add0e1381779608b0d",
+										"publish"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getKPIs",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/books/kpis",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"books",
+										"kpis"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Web",
+					"item": [
+						{
+							"name": "get published books",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/books/published?page=1&language=ar&genre=Science Fiction",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"books",
+										"published"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "1"
+										},
+										{
+											"key": "language",
+											"value": "ar"
+										},
+										{
+											"key": "genre",
+											"value": "Science Fiction"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get book by lang",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/books/lang/675860add0e1381779608b0d?language=en",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"books",
+										"lang",
+										"675860add0e1381779608b0d"
+									],
+									"query": [
+										{
+											"key": "language",
+											"value": "en"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Member",
+			"item": [
+				{
+					"name": "CMS",
+					"item": [
+						{
+							"name": "add a member",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"name\": \"new member\",\n  \"username\": \"newmem\",\n  \"email\": \"member@example.com\",\n  \"birthDate\": \"2000-01-05\",\n  \"subscribedBooks\": [],\n  \"borrowedBooks\": [],\n  \"returnRate\": 1.0\n}\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/members/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"members",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update a member",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"name\": \"Updated Name\",\n  \"username\": \"updatedusername\",\n  \"email\": \"updatedemail@example.com\",\n  \"birthDate\": \"1995-05-15\"\n}\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/members/67586f0e7ba30e651f7ccda2",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"members",
+										"67586f0e7ba30e651f7ccda2"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "delete a member",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/members/67586f0e7ba30e651f7ccda2",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"members",
+										"67586f0e7ba30e651f7ccda2"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get member paginated",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/members/?search=tonysuccar11@hotmail.com&page=1&limit=2",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"members",
+										""
+									],
+									"query": [
+										{
+											"key": "search",
+											"value": "tonysuccar11@hotmail.com"
+										},
+										{
+											"key": "page",
+											"value": "1"
+										},
+										{
+											"key": "limit",
+											"value": "2"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Web",
+					"item": [
+						{
+							"name": "get member by id",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/members/67586e3c7ba30e651f7ccd9c",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"members",
+										"67586e3c7ba30e651f7ccd9c"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "borrow book",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/members/67586e3c7ba30e651f7ccd9c/borrow/6758620fd0e1381779608b0f",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"members",
+										"67586e3c7ba30e651f7ccd9c",
+										"borrow",
+										"6758620fd0e1381779608b0f"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get borrowed books",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/members/67586e3c7ba30e651f7ccd9c/borrowed-books",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"members",
+										"67586e3c7ba30e651f7ccd9c",
+										"borrowed-books"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "subscribe",
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"action\": \"subscribe\"\n}\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/members/67586e3c7ba30e651f7ccd9c/books/675860add0e1381779608b0d",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"members",
+										"67586e3c7ba30e651f7ccd9c",
+										"books",
+										"675860add0e1381779608b0d"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "return",
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/members/67586e3c7ba30e651f7ccd9c/return/6758620fd0e1381779608b0f",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"members",
+										"67586e3c7ba30e651f7ccd9c",
+										"return",
+										"6758620fd0e1381779608b0f"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Author",
+			"item": [
+				{
+					"name": "CMS",
+					"item": [
+						{
+							"name": "add a author",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name[en]",
+											"value": "author",
+											"type": "text"
+										},
+										{
+											"key": "name[ar]",
+											"value": "author",
+											"type": "text"
+										},
+										{
+											"key": "email",
+											"value": "author@example.com",
+											"type": "text"
+										},
+										{
+											"key": "biography[en]",
+											"value": "desc",
+											"type": "text"
+										},
+										{
+											"key": "biography[ar]",
+											"value": "desc",
+											"type": "text"
+										},
+										{
+											"key": "birthDate",
+											"value": "1819-08-01",
+											"type": "text"
+										},
+										{
+											"key": "profileImage",
+											"type": "file",
+											"src": "/Users/succar/Desktop/H.melville.jpeg"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:3000/authors",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"authors"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update an author",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name[en]",
+											"value": "new author",
+											"type": "text"
+										},
+										{
+											"key": "name[ar]",
+											"value": "new author",
+											"type": "text"
+										},
+										{
+											"key": "email",
+											"value": "authorr@example.com",
+											"type": "text"
+										},
+										{
+											"key": "biography[en]",
+											"value": "bio",
+											"type": "text"
+										},
+										{
+											"key": "biography[ar]",
+											"value": "bio",
+											"type": "text"
+										},
+										{
+											"key": "profileImageUrl",
+											"type": "file",
+											"src": "/Users/succar/Desktop/F.scott.jpeg"
+										},
+										{
+											"key": "birthDate",
+											"value": "1980-01-01",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:3000/authors/675869607ba30e651f7ccd94",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"authors",
+										"675869607ba30e651f7ccd94"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "delete an author",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/authors/6758c5c81d87982f94e606e6",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"authors",
+										"6758c5c81d87982f94e606e6"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get author by id",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/authors/67586a187ba30e651f7ccd96",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"authors",
+										"67586a187ba30e651f7ccd96"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Web",
+					"item": [
+						{
+							"name": "get authorby id",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/authors/lang/67586a187ba30e651f7ccd96?language=ar",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"authors",
+										"lang",
+										"67586a187ba30e651f7ccd96"
+									],
+									"query": [
+										{
+											"key": "language",
+											"value": "ar"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		}
+	]
+}
