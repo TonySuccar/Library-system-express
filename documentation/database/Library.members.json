@@ -1,0 +1,97 @@
+[{
+  "_id": {
+    "$oid": "67586e3c7ba30e651f7ccd9c"
+  },
+  "name": "Tony Succar",
+  "username": "tonyS",
+  "email": "tonysuccar11@hotmail.com",
+  "birthDate": {
+    "$date": "2003-12-11T00:00:00.000Z"
+  },
+  "subscribedBooks": [],
+  "borrowedBooks": [
+    {
+      "borrowedBookId": {
+        "$oid": "6758620fd0e1381779608b0f"
+      },
+      "borrowedDate": {
+        "$date": "2024-12-11T18:50:56.284Z"
+      },
+      "returnDate": {
+        "$date": "2024-12-21T18:50:56.284Z"
+      },
+      "_id": {
+        "$oid": "6759df10ee31d92034abce28"
+      }
+    }
+  ],
+  "returnRate": 1,
+  "createdAt": {
+    "$date": "2024-12-10T16:37:16.035Z"
+  },
+  "updatedAt": {
+    "$date": "2024-12-11T18:50:56.285Z"
+  },
+  "__v": 25
+},
+{
+  "_id": {
+    "$oid": "67586eeb7ba30e651f7ccd9f"
+  },
+  "name": "Bob Smith",
+  "username": "bobsmith",
+  "email": "bobsmith@example.com",
+  "birthDate": {
+    "$date": "1985-03-22T00:00:00.000Z"
+  },
+  "subscribedBooks": [
+    {
+      "$oid": "675864f0d0e1381779608b15"
+    }
+  ],
+  "borrowedBooks": [
+    {
+      "borrowedBookId": {
+        "$oid": "675864f0d0e1381779608b15"
+      },
+      "borrowedDate": {
+        "$date": "2024-12-02T00:00:00.000Z"
+      },
+      "returnDate": {
+        "$date": "2024-12-12T00:00:00.000Z"
+      },
+      "_id": {
+        "$oid": "67586eeb7ba30e651f7ccda0"
+      }
+    }
+  ],
+  "returnRate": 0.8,
+  "createdAt": {
+    "$date": "2024-12-10T16:40:11.787Z"
+  },
+  "updatedAt": {
+    "$date": "2024-12-10T16:40:11.787Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67586f0e7ba30e651f7ccda2"
+  },
+  "name": "Catherine Lee",
+  "username": "catherinelee",
+  "email": "catherinelee@example.com",
+  "birthDate": {
+    "$date": "2000-01-05T00:00:00.000Z"
+  },
+  "subscribedBooks": [],
+  "borrowedBooks": [],
+  "returnRate": 1,
+  "createdAt": {
+    "$date": "2024-12-10T16:40:46.026Z"
+  },
+  "updatedAt": {
+    "$date": "2024-12-10T16:40:46.026Z"
+  },
+  "__v": 0
+}]

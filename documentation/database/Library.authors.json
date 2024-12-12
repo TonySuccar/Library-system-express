@@ -1,0 +1,133 @@
+[{
+  "_id": {
+    "$oid": "675868c87ba30e651f7ccd92"
+  },
+  "name": {
+    "en": "F. Scott Fitzgerald",
+    "ar": "فرانسيس سكوت فيتزجيرالد"
+  },
+  "email": "fscott@example.com",
+  "biography": {
+    "en": "American novelist and short story writer.",
+    "ar": "روائي وكاتب قصة قصيرة أمريكي."
+  },
+  "profileImageUrl": "/uploads/1733847240142-315591641.jpeg",
+  "birthDate": {
+    "$date": {
+      "$numberLong": "-2312150400000"
+    }
+  },
+  "createdAt": {
+    "$date": "2024-12-10T16:14:00.155Z"
+  },
+  "updatedAt": {
+    "$date": "2024-12-10T16:14:00.155Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "675869607ba30e651f7ccd94"
+  },
+  "name": {
+    "en": "new author",
+    "ar": "new author"
+  },
+  "email": "authorr@example.com",
+  "biography": {
+    "en": "bio",
+    "ar": "bio"
+  },
+  "profileImageUrl": "/uploads/1733847392141-773425926.jpeg",
+  "birthDate": {
+    "$date": "1980-01-01T00:00:00.000Z"
+  },
+  "createdAt": {
+    "$date": "2024-12-10T16:16:32.144Z"
+  },
+  "updatedAt": {
+    "$date": "2024-12-11T19:03:01.294Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67586a187ba30e651f7ccd96"
+  },
+  "name": {
+    "en": "Harper Lee",
+    "ar": "هاربر لي"
+  },
+  "email": "hlee@example.com",
+  "biography": {
+    "en": "American novelist best known for 'To Kill a Mockingbird'.",
+    "ar": "روائية أمريكية مشهورة برواية 'لقتل الطائر المحاكي'."
+  },
+  "profileImageUrl": "/uploads/1733847576070-575050834.jpeg",
+  "birthDate": {
+    "$date": {
+      "$numberLong": "-1378425600000"
+    }
+  },
+  "createdAt": {
+    "$date": "2024-12-10T16:19:36.073Z"
+  },
+  "updatedAt": {
+    "$date": "2024-12-10T16:19:36.073Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67586ad17ba30e651f7ccd98"
+  },
+  "name": {
+    "en": "Aldous Huxley",
+    "ar": "ألدوس هكسلي"
+  },
+  "email": "ahuxley@example.com",
+  "biography": {
+    "en": "English writer and philosopher.",
+    "ar": "كاتب وفيلسوف إنجليزي."
+  },
+  "profileImageUrl": "/uploads/1733847761866-68911705.jpeg",
+  "birthDate": {
+    "$date": {
+      "$numberLong": "-2380492800000"
+    }
+  },
+  "createdAt": {
+    "$date": "2024-12-10T16:22:41.869Z"
+  },
+  "updatedAt": {
+    "$date": "2024-12-10T16:22:41.869Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67586b667ba30e651f7ccd9a"
+  },
+  "name": {
+    "en": "Herman Melville",
+    "ar": "هيرمان ملفيل"
+  },
+  "email": "hmelville@example.com",
+  "biography": {
+    "en": "American novelist, short story writer, and poet.",
+    "ar": "روائي وكاتب قصة قصيرة وشاعر أمريكي."
+  },
+  "profileImageUrl": "/uploads/1733847910223-586078653.jpeg",
+  "birthDate": {
+    "$date": {
+      "$numberLong": "-4746816000000"
+    }
+  },
+  "createdAt": {
+    "$date": "2024-12-10T16:25:10.226Z"
+  },
+  "updatedAt": {
+    "$date": "2024-12-10T16:25:10.226Z"
+  },
+  "__v": 0
+}]

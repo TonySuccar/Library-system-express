@@ -1,0 +1,177 @@
+[{
+  "_id": {
+    "$oid": "675860add0e1381779608b0d"
+  },
+  "title": {
+    "en": "The Great Gatsby",
+    "ar": "غاتسبي العظيم"
+  },
+  "isbn": "978-0743273565",
+  "genre": "Fiction",
+  "description": {
+    "en": "A classic novel of the Jazz Age.",
+    "ar": "رواية كلاسيكية عن عصر الجاز."
+  },
+  "numberOfAvailableCopies": 1,
+  "isBorrowable": true,
+  "numberOfBorrowableDays": 14,
+  "isOpenToReviews": true,
+  "minAge": 16,
+  "authorId": {
+    "$oid": "675868c87ba30e651f7ccd92"
+  },
+  "coverImageUrl": "/uploads/1733845165825-857904081.JPEG",
+  "publishedDate": {
+    "$date": {
+      "$numberLong": "-1411516800000"
+    }
+  },
+  "isPublished": true,
+  "createdAt": {
+    "$date": "2024-12-10T15:39:25.840Z"
+  },
+  "updatedAt": {
+    "$date": "2024-12-11T18:49:34.957Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6758620fd0e1381779608b0f"
+  },
+  "title": {
+    "en": "1984",
+    "ar": "١٩٨٤"
+  },
+  "isbn": "978-0451524935",
+  "genre": "Dystopian",
+  "description": {
+    "en": "A dystopian novel about totalitarianism.",
+    "ar": "رواية عن الاستبداد والرقابة."
+  },
+  "numberOfAvailableCopies": 4,
+  "isBorrowable": true,
+  "numberOfBorrowableDays": 10,
+  "isOpenToReviews": false,
+  "minAge": 18,
+  "authorId": {
+    "$oid": "675869607ba30e651f7ccd94"
+  },
+  "coverImageUrl": "/uploads/1733845519267-315226188.JPEG",
+  "publishedDate": {
+    "$date": "2024-02-01T00:00:00.000Z"
+  },
+  "isPublished": false,
+  "createdAt": {
+    "$date": "2024-12-10T15:45:19.270Z"
+  },
+  "updatedAt": {
+    "$date": "2024-12-11T18:50:56.160Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67586342d0e1381779608b11"
+  },
+  "title": {
+    "en": "To Kill a Mockingbird",
+    "ar": "لقتل الطائر المحاكي"
+  },
+  "isbn": "978-0061120084",
+  "genre": "Classic",
+  "description": {
+    "en": "A novel about racial injustice in the Deep South.",
+    "ar": "رواية عن الظلم العنصري في الجنوب."
+  },
+  "numberOfAvailableCopies": 12,
+  "isBorrowable": true,
+  "numberOfBorrowableDays": 7,
+  "isOpenToReviews": true,
+  "minAge": 12,
+  "authorId": {
+    "$oid": "67586a187ba30e651f7ccd96"
+  },
+  "coverImageUrl": "/uploads/1733845826269-594217667.JPEG",
+  "publishedDate": {
+    "$date": "2024-03-01T00:00:00.000Z"
+  },
+  "isPublished": true,
+  "createdAt": {
+    "$date": "2024-12-10T15:50:26.272Z"
+  },
+  "updatedAt": {
+    "$date": "2024-12-10T15:50:26.272Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67586433d0e1381779608b13"
+  },
+  "title": {
+    "en": "Brave New World",
+    "ar": "عالم جديد شجاع"
+  },
+  "isbn": "978-0060850524",
+  "genre": "Science Fiction",
+  "description": {
+    "en": "A futuristic dystopian novel.",
+    "ar": "رواية خيالية مستقبلية."
+  },
+  "numberOfAvailableCopies": 10,
+  "isBorrowable": false,
+  "numberOfBorrowableDays": 0,
+  "isOpenToReviews": false,
+  "minAge": 15,
+  "authorId": {
+    "$oid": "67586ad17ba30e651f7ccd98"
+  },
+  "coverImageUrl": "/uploads/1733846067094-696615753.jpg",
+  "publishedDate": {
+    "$date": "2024-04-01T00:00:00.000Z"
+  },
+  "isPublished": true,
+  "createdAt": {
+    "$date": "2024-12-10T15:54:27.096Z"
+  },
+  "updatedAt": {
+    "$date": "2024-12-10T15:54:27.096Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "675864f0d0e1381779608b15"
+  },
+  "title": {
+    "en": "Moby-Dick",
+    "ar": "موبي ديك"
+  },
+  "isbn": "978-1503280786",
+  "genre": "Adventure",
+  "description": {
+    "en": "A tale of a sea captain's obsession with a white whale.",
+    "ar": "قصة هوس القبطان بحوت أبيض."
+  },
+  "numberOfAvailableCopies": 4,
+  "isBorrowable": true,
+  "numberOfBorrowableDays": 21,
+  "isOpenToReviews": false,
+  "minAge": 14,
+  "authorId": {
+    "$oid": "67586b667ba30e651f7ccd9a"
+  },
+  "coverImageUrl": "/uploads/1733846256740-609421934.jpg",
+  "publishedDate": {
+    "$date": "2024-05-01T00:00:00.000Z"
+  },
+  "isPublished": true,
+  "createdAt": {
+    "$date": "2024-12-10T15:57:36.742Z"
+  },
+  "updatedAt": {
+    "$date": "2024-12-10T15:57:36.742Z"
+  },
+  "__v": 0
+}]

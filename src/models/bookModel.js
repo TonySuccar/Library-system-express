@@ -7,7 +7,7 @@ const bookSchema = new Schema(
       en: { type: String, required: true },
       ar: { type: String, required: true },
     },
-    isbn: { type: String, unique: true, required: true }, // Example: ISBN 978-0-596-52068-7
+    isbn: { type: String, unique: true, required: true }, 
     genre: { type: String, required: true },
     description: {
       en: { type: String, required: true },
@@ -17,7 +17,7 @@ const bookSchema = new Schema(
     isBorrowable: { type: Boolean, default: true },
     numberOfBorrowableDays: { type: Number, required: true },
     isOpenToReviews: { type: Boolean, default: true },
-    minAge: { type: Number, required: true }, // Minimum required age to borrow a book
+    minAge: { type: Number, required: true },
     authorId: { type: Schema.Types.ObjectId, ref: "Author", required: true },
     coverImageUrl: { type: String, required: true },
     publishedDate: { type: Date, required: true },
